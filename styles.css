@@ -1,0 +1,561 @@
+/* Custom styles for the dark-themed header */
+.navbar {
+    background-color: #1c1c1c;
+    /* Dark background color */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #ffcc00 !important;
+    /* Bright yellow for brand name */
+    font-family: 'Verdana', sans-serif;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00 !important;
+    /* Yellow color on hover */
+}
+
+.btn-warning {
+    background-color: #ffcc00;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: #e6b800;
+    /* Darker yellow on hover */
+    color: #1c1c1c;
+    /* Dark text color on hover */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%288255255,255,255,0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Hero Section styling */
+.hero-section {
+    background-image: url('images/background.jpg');
+    /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    position: relative;
+    color: #fff;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Dark overlay */
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-warning {
+    background-color: #ffcc00;
+    border: none;
+    color: #1c1c1c;
+    transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: #e6b800;
+}
+
+/* Popular Dishes Section styling */
+.popular-dishes-section {
+    background-color: #1c1c1c;
+    padding: 60px 0;
+}
+
+.popular-dishes-section h2 {
+    font-size: 2.5rem;
+    font-family: 'Verdana', sans-serif;
+    color: #ffcc00;
+    margin-bottom: 2rem;
+}
+
+/* Dish Card styling */
+.dish-card {
+    background-color: #2b2b2b;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    /* Add border radius to the card */
+}
+
+.dish-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.dish-card:hover {
+    transform: translateY(-10px);
+    /* Slight lift on hover */
+}
+
+/* Running Glow Effect */
+.dish-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    /* Aligns with the card's top */
+    left: 0;
+    /* Aligns with the card's left */
+    right: 0;
+    /* Aligns with the card's right */
+    bottom: 0;
+    /* Aligns with the card's bottom */
+    border-radius: 8px;
+    /* Match the card's border radius */
+    border: 3px solid transparent;
+    /* Transparent border */
+    background: linear-gradient(90deg, rgba(255, 204, 0, 0.5), rgba(255, 99, 71, 0.5), rgba(255, 204, 0, 0.5));
+    background-size: 200% 200%;
+    animation: running-glow 3s linear infinite;
+    z-index: -1;
+    /* Position behind the card content */
+    opacity: 0;
+    /* Initially hidden */
+}
+
+/* Show glow effect on hover */
+.dish-card:hover::before {
+    opacity: 1;
+    /* Show the glow effect on hover */
+}
+
+/* Card Body */
+.dish-card .card-body {
+    position: relative;
+    /* Ensure body content stays above the glow effect */
+    z-index: 1;
+    /* Position above the glow */
+    text-align: center;
+}
+
+.dish-card .card-title {
+    font-size: 1.25rem;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.dish-card .card-text {
+    color: #cccccc;
+}
+
+/* Animation Keyframes */
+@keyframes running-glow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* About Us Section styling */
+.about-us-section {
+    background-color: #1c1c1c;
+    /* Dark background color */
+    padding: 60px 0;
+    /* Vertical padding */
+}
+
+.about-us-section h2 {
+    font-size: 2.5rem;
+    /* Heading size */
+    color: #ffcc00;
+    /* Bright yellow for the heading */
+    margin-bottom: 2rem;
+    /* Space below the heading */
+}
+
+.about-us-section .lead {
+    font-size: 1.2rem;
+    /* Slightly larger font for emphasis */
+    color: #cccccc;
+    /* Light gray color for text */
+    margin-bottom: 1.5rem;
+    /* Space below the paragraph */
+}
+
+.about-us-section p {
+    color: #cccccc;
+    /* Light gray for paragraph text */
+}
+
+.about-us-section .btn-warning {
+    background-color: #ffcc00;
+    /* Yellow button */
+    color: #1c1c1c;
+    /* Dark text color */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for button */
+}
+
+.about-us-section .btn-warning:hover {
+    background-color: #e6b800;
+    /* Darker yellow on hover */
+}
+
+/* Why Choose Us Section styling */
+.why-choose-us-section {
+    background-color: #1c1c1c;
+    /* Dark background color */
+    padding: 60px 0;
+    /* Vertical padding */
+}
+
+.why-choose-us-section h2 {
+    font-size: 2.5rem;
+    /* Heading size */
+    color: #ffcc00;
+    /* Bright yellow for the heading */
+    margin-bottom: 3rem;
+    /* Space below the heading */
+}
+
+.feature-box {
+    background-color: #2b2b2b;
+    /* Darker background for feature boxes */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 30px;
+    /* Inner padding */
+    position: relative;
+    /* For glow effect positioning */
+    overflow: hidden;
+    /* Ensure the glow effect stays within the box */
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
+    /* Glow effect */
+    transition: transform 0.3s ease;
+    /* Smooth scaling on hover */
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    /* Lift effect on hover */
+}
+
+.feature-box h3 {
+    font-size: 1.5rem;
+    /* Subheading size */
+    color: #ffcc00;
+    /* Bright yellow for subheading */
+}
+
+.feature-box p {
+    color: #cccccc;
+    /* Light gray for paragraph text */
+}
+
+/* Font Awesome Icons */
+.feature-box i {
+    color: #ffcc00;
+    /* Icon color */
+}
+
+/* Gallery Section styling */
+.gallery-section {
+    background-color: #1c1c1c;
+    /* Dark background color */
+    padding: 60px 0;
+    /* Vertical padding */
+}
+
+.gallery-section h2 {
+    font-size: 2.5rem;
+    /* Heading size */
+    color: #ffcc00;
+    /* Bright yellow for the heading */
+    margin-bottom: 3rem;
+    /* Space below the heading */
+}
+
+.gallery-item {
+    position: relative;
+    /* For glow effect positioning */
+    overflow: hidden;
+    /* Ensure the glow effect stays within the box */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+    /* Glow effect */
+    transition: transform 0.3s ease;
+    /* Smooth scaling on hover */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
+}
+
+/* Image styling */
+.gallery-item img {
+    width: 100%;
+    /* Full width */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    /* Match rounded corners */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-item {
+        margin-bottom: 30px;
+        /* Space between items on smaller screens */
+    }
+}
+
+/* Testimonials Section styling */
+.testimonials-section {
+    background-color: #1c1c1c;
+    /* Dark background color */
+    padding: 60px 0;
+    /* Vertical padding */
+}
+
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    /* Heading size */
+    color: #ffcc00;
+    /* Bright yellow for the heading */
+    margin-bottom: 3rem;
+    /* Space below the heading */
+}
+
+.testimonial-card {
+    background-color: #2b2b2b;
+    /* Darker background for testimonial cards */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 30px;
+    /* Inner padding */
+    position: relative;
+    /* For glow effect positioning */
+    overflow: hidden;
+    /* Ensure the glow effect stays within the box */
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+    /* Glow effect */
+    transition: transform 0.3s ease;
+    /* Smooth scaling on hover */
+    margin-bottom: 30px;
+    /* Space between testimonial cards */
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    /* Lift effect on hover */
+}
+
+.testimonial-card p {
+    font-style: italic;
+    /* Italic style for testimonials */
+    color: #cccccc;
+    /* Light gray for testimonial text */
+}
+
+.testimonial-card h5 {
+    font-size: 1.25rem;
+    /* Name size */
+    color: #ffcc00;
+    /* Bright yellow for name */
+    margin-top: 15px;
+    /* Space above name */
+}
+
+.testimonial-card span {
+    display: block;
+    /* Block display for role */
+    color: #cccccc;
+    /* Light gray for role */
+    font-size: 0.9rem;
+    /* Slightly smaller size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .testimonial-card {
+        margin-bottom: 20px;
+        /* Adjust spacing for smaller screens */
+    }
+}
+
+/* Contact Us Section styling */
+.contact-us-section {
+    background-color: #1c1c1c;
+    /* Dark background color */
+    padding: 60px 0;
+    /* Vertical padding */
+}
+
+.contact-us-section h2 {
+    font-size: 2.5rem;
+    /* Heading size */
+    color: #ffcc00;
+    /* Bright yellow for the heading */
+    margin-bottom: 2rem;
+    /* Space below the heading */
+}
+
+.contact-us-section p {
+    color: #cccccc;
+    /* Light gray for paragraph text */
+}
+
+.form-control {
+    background-color: #2b2b2b;
+    /* Dark background for form fields */
+    color: #ffffff;
+    /* White text */
+    border: 1px solid #444;
+    /* Dark border */
+    transition: border-color 0.3s ease;
+    /* Transition for border color */
+}
+
+.form-control:focus {
+    border-color: #ffcc00;
+    /* Yellow border on focus */
+    background-color: #2b2b2b;
+    /* Maintain dark background */
+}
+
+.btn-warning {
+    background-color: #ffcc00;
+    /* Yellow button */
+    color: #1c1c1c;
+    /* Dark text color */
+    transition: background-color 0.3s ease;
+    /* Transition for background */
+}
+
+.btn-warning:hover {
+    background-color: #e6b800;
+    /* Darker yellow on hover */
+}
+
+.contact-info {
+    text-align: left;
+    /* Align text to the left */
+    margin-top: 30px;
+    /* Space above contact info */
+}
+
+.contact-info h5 {
+    color: #ffcc00;
+    /* Bright yellow for subheading */
+    margin-bottom: 1rem;
+    /* Space below subheading */
+}
+
+.contact-info p {
+    color: #cccccc;
+    /* Light gray for contact info text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-info {
+        text-align: center;
+        /* Center align text on small screens */
+    }
+}
+
+/* Footer Section styling */
+.footer-section {
+    background-color: #1c1c1c;
+    /* Dark background color */
+    color: #ffffff;
+    /* White text */
+}
+
+.footer-section h5 {
+    font-size: 1.5rem;
+    /* Heading size */
+    margin-bottom: 1rem;
+    /* Space below headings */
+}
+
+.footer-section p {
+    color: #cccccc;
+    /* Light gray for paragraph text */
+}
+
+.footer-section a {
+    color: #ffcc00;
+    /* Bright yellow for links */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover */
+}
+
+.footer-section a:hover {
+    color: #e6b800;
+    /* Darker yellow on hover */
+}
+
+.social-icons {
+    margin-top: 10px;
+    /* Space above icons */
+}
+
+.social-icons a {
+    margin: 0 10px;
+    /* Space between icons */
+    font-size: 1.5rem;
+    /* Icon size */
+    color: #ffcc00;
+    /* Yellow color for icons */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover */
+}
+
+.social-icons a:hover {
+    color: #e6b800;
+    /* Darker yellow on hover */
+}
+
+.footer-section hr {
+    margin: 20px 0;
+    /* Space above and below the line */
+    border: none;
+    /* Remove default border */
+    height: 2px;
+    /* Height of the line */
+    background-color: #ffcc00;
+    /* Color of the line */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-section h5 {
+        font-size: 1.25rem;
+        /* Slightly smaller heading size */
+    }
+
+    .social-icons a {
+        font-size: 1.25rem;
+        /* Slightly smaller icon size */
+    }
+}
